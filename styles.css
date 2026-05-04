@@ -1,4 +1,4 @@
-﻿/* --- ESTILOS GENERALES --- */
+/* --- ESTILOS GENERALES --- */
         :root {
             --primary: #0F172A;
             /* Slate 900 */
@@ -277,9 +277,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
             color: var(--accent);
             margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .icon svg {
+            width: 32px;
+            height: 32px;
+            stroke-width: 2px;
             transition: 0.3s;
         }
 
@@ -432,6 +438,10 @@
         .footer-col h4 {
             color: white;
             margin-bottom: 20px;
+        }
+
+        .footer-col .logo {
+            color: var(--white);
         }
 
         .footer-col ul {
