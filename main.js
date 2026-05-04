@@ -1,4 +1,4 @@
-﻿// MenÃº Responsive
+﻿// Menú Responsive
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
 
@@ -6,7 +6,7 @@
             navLinks.classList.toggle('active');
         });
 
-        // Cerrar menÃº al hacer clic en un enlace
+        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
