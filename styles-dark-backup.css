@@ -1,0 +1,880 @@
+/* ============================================
+   TEYSER — Steel Premium Design System
+   Paleta inspirada en acero inoxidable pulido
+   ============================================ */
+
+:root {
+    /* Grises Acero — extraídos del logo */
+    --steel-950: #1a1d23;      /* Acero profundo */
+    --steel-900: #22262e;      /* Fondos principales */
+    --steel-800: #2d323c;      /* Superficies elevadas */
+    --steel-700: #3d4351;      /* Bordes activos */
+    --steel-600: #515a6b;      /* Texto terciario */
+    --steel-500: #6b7588;      /* Texto secundario */
+    --steel-400: #8b95a8;      /* Detalles */
+    --steel-300: #b0b8c8;      /* Subtítulos */
+    --steel-200: #d0d6e0;      /* Texto cuerpo */
+    --steel-100: #e8ecf1;      /* Texto primario */
+    --steel-50:  #f4f6f8;      /* Blancos cálidos */
+
+    /* Acento — Azul acero industrial */
+    --accent: #5b8fb9;         /* Azul acero principal */
+    --accent-light: #7badd4;   /* Azul acero claro */
+    --accent-glow: #4a7ea8;    /* Azul acero profundo */
+    --accent-subtle: rgba(91, 143, 185, 0.12);
+
+    /* Plata Metálica — para efectos especiales */
+    --silver: #c0c8d4;
+    --silver-shine: linear-gradient(135deg, #b0b8c8 0%, #d8dce4 50%, #b0b8c8 100%);
+
+    /* Estructura */
+    --border: rgba(255, 255, 255, 0.06);
+    --border-hover: rgba(255, 255, 255, 0.12);
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --radius-sm: 6px;
+    --container: 1200px;
+
+    /* Sombras — limpias, sin glow excesivo */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.12);
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.18);
+    --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* --- RESET & BASE --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: var(--steel-200);
+    background-color: var(--steel-900);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- TIPOGRAFÍA --- */
+h1, h2, h3, h4 {
+    font-family: 'Barlow', sans-serif;
+    color: var(--steel-50);
+    line-height: 1.15;
+}
+
+h1 { font-weight: 800; letter-spacing: -0.5px; }
+
+h2 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+/* Línea de acento metálica bajo h2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--silver-shine);
+    margin-top: 16px;
+    border-radius: 2px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- BOTONES PREMIUM --- */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-glow), var(--accent));
+    color: #ffffff;
+    padding: 16px 42px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* --- HEADER GLASS --- */
+header {
+    background: rgba(34, 38, 46, 0.75);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.logo img:hover {
+    opacity: 0.9;
+}
+
+/* Logo texto en footer */
+.logo-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--steel-50);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-text span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a:not(.btn) {
+    color: var(--steel-300);
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+    letter-spacing: 0.3px;
+}
+
+.nav-links a:not(.btn):hover {
+    color: var(--steel-50);
+}
+
+.nav-links a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background: var(--silver-shine);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:not(.btn):hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: var(--steel-100);
+}
+
+/* --- HERO --- */
+.hero {
+    background:
+        linear-gradient(to bottom, rgba(26, 29, 35, 0.3) 0%, var(--steel-900) 100%),
+        linear-gradient(to right, rgba(26, 29, 35, 0.85) 0%, rgba(26, 29, 35, 0.5) 100%),
+        url('Foto Teyser Planta.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 180px 0 140px;
+    text-align: left;
+    position: relative;
+}
+
+/* Sutil resplandor ambiental */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse at 20% 60%, rgba(91, 143, 185, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    margin: 0;
+}
+
+.hero h1 {
+    font-size: 3.8rem;
+    margin-bottom: 28px;
+    color: var(--steel-50);
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--steel-300);
+    max-width: 620px;
+    line-height: 1.8;
+}
+
+/* --- SERVICIOS --- */
+.services {
+    padding: 120px 0;
+    text-align: center;
+    background: var(--steel-950);
+    position: relative;
+}
+
+/* Resplandor decorativo */
+.services::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(91,143,185,0.04) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.services > .container > p {
+    color: var(--steel-400) !important;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    background: var(--steel-900);
+    padding: 48px 36px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Borde superior metálico */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--silver-shine);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: var(--steel-800);
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-card);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    background: var(--accent-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-light);
+    margin-bottom: 28px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(91, 143, 185, 0.15);
+}
+
+.icon svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 1.5px;
+}
+
+.card:hover .icon {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(91, 143, 185, 0.3);
+    border-color: transparent;
+}
+
+.card h3 {
+    margin-bottom: 16px;
+    color: var(--steel-100);
+}
+
+.card p {
+    color: var(--steel-400);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+/* --- NOSOTROS --- */
+.about {
+    background: var(--steel-900);
+    padding: 120px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text p {
+    margin-bottom: 24px;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    color: var(--steel-300);
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid var(--border-hover);
+    transition: box-shadow 0.4s ease;
+}
+
+.about-image img:hover {
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* Acento metálico detrás de la imagen */
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background: var(--silver-shine);
+    z-index: -1;
+    border-radius: var(--radius-md);
+    opacity: 0.15;
+}
+
+/* --- GALERÍA --- */
+.gallery {
+    padding: 120px 0;
+    background: var(--steel-950);
+}
+
+.gallery h2 {
+    text-align: center;
+    display: block;
+}
+
+.gallery h2::after {
+    margin: 18px auto 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    height: 340px;
+    border: 1px solid var(--border);
+    transition: border-color 0.3s ease;
+}
+
+.gallery-item:hover {
+    border-color: var(--border-hover);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+    filter: brightness(0.85) contrast(1.05) saturate(0.9);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(1) contrast(1.05) saturate(1);
+}
+
+/* --- CONTACTO --- */
+.contact {
+    padding: 120px 0;
+    background: var(--steel-900);
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.contact h2::after {
+    margin: 18px auto 0;
+}
+
+.contact > .container > p {
+    color: var(--steel-400);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.form-box {
+    max-width: 720px;
+    margin: auto;
+    background: var(--steel-950);
+    padding: 56px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-hover);
+    box-shadow: var(--shadow-card);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid var(--border-hover);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--steel-100);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    background: rgba(91, 143, 185, 0.05);
+    box-shadow: 0 0 0 4px rgba(91, 143, 185, 0.08);
+}
+
+::placeholder {
+    color: var(--steel-600);
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--steel-950);
+    color: var(--steel-500);
+    padding: 80px 0 30px;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.footer-col h4 {
+    color: var(--steel-100);
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+    font-family: 'Barlow', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Logo en el footer */
+.footer-col .logo {
+    color: var(--steel-50);
+    font-family: 'Barlow', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-col .logo span {
+    color: var(--accent);
+}
+
+.footer-col p {
+    line-height: 1.8;
+    color: var(--steel-500);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col li {
+    margin-bottom: 14px;
+}
+
+.footer-col a {
+    color: var(--steel-500);
+    transition: all 0.25s ease;
+}
+
+.footer-col a:hover {
+    color: var(--accent-light);
+    padding-left: 4px;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 30px;
+    color: var(--steel-600);
+    font-size: 0.85rem;
+}
+
+/* --- WHATSAPP --- */
+.whatsapp-float {
+    position: fixed;
+    width: 62px;
+    height: 62px;
+    bottom: 35px;
+    right: 35px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-icon {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+/* --- CLIENTES (si se usa) --- */
+.clients {
+    background: var(--steel-800);
+    padding: 50px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.clients h3 {
+    text-align: center;
+    color: var(--steel-500);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+.logos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.logos-grid:hover {
+    opacity: 0.8;
+}
+
+.client-logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--steel-300);
+    font-family: 'Barlow', sans-serif;
+}
+
+/* --- HERO BADGE --- */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(91, 143, 185, 0.1);
+    border: 1px solid rgba(91, 143, 185, 0.28);
+    color: var(--accent-light);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin-bottom: 32px;
+}
+
+.hero-badge-dot {
+    width: 7px;
+    height: 7px;
+    background: #4ade80;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+    animation: badge-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5); }
+    70%  { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* --- CREDENTIALS STRIP --- */
+.credentials {
+    background: var(--steel-800);
+    border-top: 1px solid var(--border-hover);
+    border-bottom: 1px solid var(--border-hover);
+}
+
+.credentials .container {
+    padding: 0 20px;
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.credential-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 24px;
+    gap: 14px;
+    position: relative;
+}
+
+.credential-item + .credential-item {
+    border-left: 1px solid var(--border-hover);
+}
+
+.credential-number {
+    font-family: 'Barlow', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--steel-50);
+    letter-spacing: -1px;
+}
+
+.credential-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--accent-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-light);
+    border: 1px solid rgba(91, 143, 185, 0.15);
+}
+
+.credential-label {
+    font-size: 0.88rem;
+    color: var(--steel-400);
+    font-weight: 500;
+    line-height: 1.45;
+    max-width: 150px;
+}
+
+/* --- REVEAL ANIMATIONS --- */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-reveal].revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 140px 0 80px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero .container {
+        margin: 0 auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 82px;
+        left: 0;
+        background: rgba(34, 38, 46, 0.96);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        width: 100%;
+        flex-direction: column;
+        padding: 40px 0;
+        border-bottom: 1px solid var(--border);
+        transform: translateY(-150%);
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+    }
+
+    .about-image::before {
+        display: none;
+    }
+
+    .form-box {
+        padding: 36px 24px;
+    }
+
+    .services, .about, .gallery, .contact {
+        padding: 80px 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .credentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .credential-item + .credential-item {
+        border-left: none;
+    }
+
+    .credential-item:nth-child(2) {
+        border-left: 1px solid var(--border-hover);
+    }
+
+    .credential-item:nth-child(3),
+    .credential-item:nth-child(4) {
+        border-top: 1px solid var(--border-hover);
+    }
+
+    .credential-item:nth-child(4) {
+        border-left: 1px solid var(--border-hover);
+    }
+}
