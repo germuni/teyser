@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento Industrial en Buenos Aires | Preventivo y Correctivo — Teyser</title>
+    <meta name="description"
+        content="Mantenimiento mecánico industrial preventivo y correctivo en Buenos Aires y GBA. Intervención rápida ante urgencias, paradas de planta programadas y mantenimiento continuo. +25 años de experiencia. Taller en Moreno.">
+    <meta name="keywords"
+        content="mantenimiento industrial Buenos Aires, mantenimiento mecánico GBA, mantenimiento preventivo planta, mantenimiento correctivo urgencias, paradas de planta Buenos Aires, mantenimiento industrial Moreno, servicio técnico industrial Argentina">
+    <meta name="author" content="Teyser Montajes Industriales">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://teyser.com.ar/mantenimiento-industrial">
+    <link rel="icon" type="image/webp" href="LogoTeyser.webp">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://teyser.com.ar/mantenimiento-industrial">
+    <meta property="og:title" content="Mantenimiento Industrial en Buenos Aires | Preventivo y Correctivo — Teyser">
+    <meta property="og:description" content="Mantenimiento mecánico industrial preventivo y correctivo en Buenos Aires. Intervención rápida ante urgencias. +25 años de experiencia.">
+    <meta property="og:image" content="https://teyser.com.ar/Fotos/case-montajes.webp">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Teyser Montajes Industriales">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mantenimiento Industrial en Buenos Aires — Teyser">
+    <meta name="twitter:description" content="Mantenimiento mecánico preventivo y correctivo en Buenos Aires. Respuesta rápida ante urgencias. +25 años.">
+    <meta name="twitter:image" content="https://teyser.com.ar/Fotos/case-montajes.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="Fotos/case-montajes.webp">
+
+    <!-- Schema.org: Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Mantenimiento Mecánico Industrial",
+      "description": "Servicios de mantenimiento mecánico industrial preventivo y correctivo para plantas de la industria alimenticia y química en Buenos Aires y GBA.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Teyser Montajes Industriales",
+        "url": "https://teyser.com.ar/",
+        "telephone": "+541136292997",
+        "email": "info@teyser.com.ar",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Moreno",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "AR"
+        }
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Buenos Aires"},
+        {"@type": "AdministrativeArea", "name": "Gran Buenos Aires"},
+        {"@type": "City", "name": "Moreno"}
+      ],
+      "serviceType": "Mantenimiento Industrial",
+      "url": "https://teyser.com.ar/mantenimiento-industrial"
+    }
+    </script>
+    <meta name="google-site-verification" content="0afqe0fQy7a0navyc0AF_N-gjVUav7LhWIp07wSXdBg" />
+
+    <style>
+        .mant-hero {
+            background-image: url('Fotos/case-montajes.webp');
+            background-position: center 40%;
+        }
+
+        /* Tipos de mantenimiento */
+        .mant-tipos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .mant-tipo-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 14px;
+            padding: 36px 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+        .mant-tipo-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(37,99,235,0.4);
+        }
+        .mant-tipo-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+        }
+        .mant-tipo-card.preventivo::before { background: var(--accent-blue); }
+        .mant-tipo-card.correctivo::before { background: var(--accent-orange); }
+        .mant-tipo-card.paradas::before   { background: #10b981; }
+
+        .mant-tipo-badge {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+        }
+        .preventivo .mant-tipo-badge { background: rgba(37,99,235,0.15); color: #93c5fd; border: 1px solid rgba(37,99,235,0.3); }
+        .correctivo .mant-tipo-badge { background: rgba(249,115,22,0.15); color: #fdba74; border: 1px solid rgba(249,115,22,0.3); }
+        .paradas    .mant-tipo-badge { background: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
+
+        .mant-tipo-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 12px;
+        }
+        .mant-tipo-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .mant-tipos { grid-template-columns: 1fr; }
+        }
+
+        /* Galería */
+        .gallery-mant {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+        .gallery-mant .img-card {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+            background: var(--bg-card);
+        }
+        .gallery-mant .img-card img {
+            width: 100%; height: 100%;
+            object-fit: cover; display: block;
+            transition: transform 0.4s ease;
+        }
+        .gallery-mant .img-card:hover img { transform: scale(1.04); }
+        .gallery-mant .img-caption {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 28px 16px 14px;
+            background: linear-gradient(to top, rgba(5,11,20,0.92) 0%, transparent 100%);
+            color: var(--text-light);
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+        .gallery-mant .img-card.wide {
+            grid-column: span 2;
+            aspect-ratio: 16/7;
+        }
+        @media (max-width: 768px) {
+            .gallery-mant { grid-template-columns: 1fr 1fr; }
+            .gallery-mant .img-card.wide { grid-column: span 2; }
+        }
+        @media (max-width: 500px) {
+            .gallery-mant { grid-template-columns: 1fr; }
+            .gallery-mant .img-card.wide { grid-column: span 1; aspect-ratio: 4/3; }
+        }
+
+        /* Urgencia CTA */
+        .urgencia-banner {
+            background: linear-gradient(135deg, rgba(249,115,22,0.12) 0%, rgba(37,99,235,0.12) 100%);
+            border: 1px solid rgba(249,115,22,0.3);
+            border-radius: 16px;
+            padding: 40px 48px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            margin-top: 56px;
+        }
+        .urgencia-banner .urg-text h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 8px;
+        }
+        .urgencia-banner .urg-text p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .urgencia-banner .urg-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        @media (max-width: 640px) {
+            .urgencia-banner {
+                flex-direction: column;
+                padding: 32px 28px;
+                text-align: center;
+            }
+        }
+
+        /* FAQ */
+        .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: var(--bg-card); border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; overflow: hidden; }
+        .faq-question {
+            width: 100%; display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 24px; background: none; border: none; color: var(--text-white);
+            font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600;
+            text-align: left; cursor: pointer; gap: 16px; transition: background 0.2s;
+        }
+        .faq-question:hover { background: rgba(255,255,255,0.04); }
+        .faq-question svg { flex-shrink: 0; transition: transform 0.3s; color: var(--accent-blue); }
+        .faq-item.open .faq-question svg { transform: rotate(45deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; padding: 0 24px; }
+        .faq-item.open .faq-answer { max-height: 300px; padding: 0 24px 20px; }
+        .faq-answer p { color: var(--text-muted); line-height: 1.7; font-size: 0.95rem; }
+
+        /* Breadcrumb */
+        .breadcrumb-wrap { background: var(--bg-darker); }
+        .breadcrumb { padding: 16px 0; font-size: 0.82rem; color: var(--text-muted); border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--accent-blue); }
+        .breadcrumb span { margin: 0 8px; opacity: 0.5; }
+
+        /* Process steps (reutilizando el de piping) */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0;
+            margin-top: 56px;
+            position: relative;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 10%; right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-orange));
+            z-index: 0;
+        }
+        .process-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
+        .step-num {
+            width: 72px; height: 72px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--accent-blue);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem; font-weight: 700;
+            color: var(--accent-blue);
+        }
+        .process-step h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-white); margin-bottom: 8px; }
+        .process-step p  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+        @media (max-width: 640px) {
+            .process-steps::before { display: none; }
+            .process-steps { gap: 24px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="/"><img src="LogoTeyser.webp" alt="Teyser Equipos Industriales"></a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="nav-links" id="nav-links">
+                    <a href="/">Inicio</a>
+                    <a href="/#soluciones">Soluciones</a>
+                    <a href="/#casos">Casos de Éxito</a>
+                    <a href="/#diferencial">Por qué Teyser</a>
+                    <a href="#contacto" class="btn btn-primary">Solicitar Cotización</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Inicio</a>
+                <span>›</span>
+                <a href="/#soluciones">Servicios</a>
+                <span>›</span>
+                Mantenimiento Industrial
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero mant-hero" id="inicio">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content" data-reveal>
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Preventivo · Correctivo · Paradas de planta · Moreno, BA
+                </div>
+                <h1>Mantenimiento Industrial en Buenos Aires — Preventivo, Correctivo y Paradas de Planta</h1>
+                <p>Planes preventivos que evitan paradas no programadas, respuesta rápida ante urgencias
+                    y asistencia técnica especializada para sus paradas de planta. 25 años cuidando
+                    la operación de plantas alimenticias y químicas.</p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-primary btn-large">SOLICITAR COTIZACIÓN
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="tel:+541136292997" class="btn btn-outline btn-large">📞 URGENCIA: +54 11 3629 2997</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDENCIALES -->
+    <section class="credentials">
+        <div class="container">
+            <div class="credentials-grid">
+                <div class="credential-item" data-reveal>
+                    <div class="credential-number"><span class="count" data-target="25">0</span>+</div>
+                    <div class="credential-label">Años en<br>mantenimiento industrial</div>
+                </div>
+                <div class="credential-item" data-reveal>
+                    <div class="credential-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="credential-label">Respuesta rápida<br>ante urgencias</div>
+                </div>
+                <div class="credential-item" data-reveal>
+                    <div class="credential-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <div class="credential-label">Personal con ART<br>y EPP al día</div>
+                </div>
+                <div class="credential-item" data-reveal>
+                    <div class="credential-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div class="credential-label">Taller propio para<br>reparaciones urgentes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ NOS ELIGEN -->
+    <section class="pain-points section-dark" id="por-que">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <h2 class="subtitle">Por qué nos eligen</h2>
+                <h3>Respuestas concretas para mantener su planta operativa</h3>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card" data-reveal>
+                    <div class="pain-check">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Presencia rápida en planta ante cualquier falla</h4>
+                    <p class="pain-desc">Cuadrillas disponibles para movilizarse a su planta. Entendemos que
+                        cada hora de parada tiene un costo directo sobre la producción.</p>
+                </div>
+                <div class="pain-card" data-reveal>
+                    <div class="pain-check">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Planes preventivos que evitan paradas no programadas</h4>
+                    <p class="pain-desc">Diseñamos un plan de mantenimiento adaptado al ritmo de su operación.
+                        Menos sorpresas, más continuidad productiva.</p>
+                </div>
+                <div class="pain-card" data-reveal>
+                    <div class="pain-check">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Resolvemos en planta lo que otros mandan al taller</h4>
+                    <p class="pain-desc">Nuestro equipo llega con las herramientas y el criterio técnico
+                        para diagnosticar y resolver in-situ, minimizando tiempos muertos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPOS DE MANTENIMIENTO -->
+    <section class="section-darker" id="servicios">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <h2 class="subtitle">Modalidades de servicio</h2>
+                <h3>Adaptamos el mantenimiento a su operación</h3>
+                <p>No existe un modelo único. Trabajamos según las necesidades reales de cada planta.</p>
+            </div>
+
+            <div class="mant-tipos">
+                <div class="mant-tipo-card preventivo" data-reveal>
+                    <div class="mant-tipo-badge">Preventivo</div>
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Intervenciones planificadas y periódicas para mantener los equipos en condiciones
+                        óptimas antes de que fallen. La forma más económica de mantener su planta.</p>
+                    <ul class="specs-list">
+                        <li>Inspección y lubricación de equipos rotativos</li>
+                        <li>Revisión de válvulas, sellos y juntas</li>
+                        <li>Control de soldaduras y uniones críticas</li>
+                        <li>Informe de estado con recomendaciones</li>
+                        <li>Cronograma anual adaptado a su planta</li>
+                    </ul>
+                </div>
+
+                <div class="mant-tipo-card correctivo" data-reveal>
+                    <div class="mant-tipo-badge">Correctivo</div>
+                    <h3>Mantenimiento Correctivo</h3>
+                    <p>Intervención rápida ante roturas y fallas imprevistas. Nuestro objetivo es
+                        restablecer la operación en el menor tiempo posible.</p>
+                    <ul class="specs-list">
+                        <li>Reparación de soldaduras fisuradas o rotas</li>
+                        <li>Reemplazo de cañerías y conexiones dañadas</li>
+                        <li>Reacondicionamiento de equipos rotativos</li>
+                        <li>Reparación de pérdidas en sistemas de vapor</li>
+                        <li>Modificación de cuadros de válvulas</li>
+                    </ul>
+                </div>
+
+                <div class="mant-tipo-card paradas" data-reveal>
+                    <div class="mant-tipo-badge">Paradas de planta</div>
+                    <h3>Asistencia en Paradas</h3>
+                    <p>Maximizamos cada hora de parada programada. Planificamos el trabajo con
+                        anticipación para ejecutar la mayor cantidad de tareas en el menor tiempo.</p>
+                    <ul class="specs-list">
+                        <li>Planificación detallada previa a la parada</li>
+                        <li>Cuadrillas múltiples para trabajo en paralelo</li>
+                        <li>Modificaciones y mejoras de proceso</li>
+                        <li>Cambio de equipos y tramos de cañería</li>
+                        <li>Informe técnico de todo lo ejecutado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER URGENCIAS -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="urgencia-banner" data-reveal>
+                <div class="urg-icon">🚨</div>
+                <div class="urg-text">
+                    <h3>¿Tiene una urgencia ahora mismo?</h3>
+                    <p>Llámenos directamente. Nuestro equipo evalúa la situación y coordina la intervención
+                        en el menor tiempo posible.</p>
+                </div>
+                <a href="tel:+541136292997" class="btn btn-primary" style="white-space: nowrap; flex-shrink: 0;">
+                    LLAMAR AHORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section class="section-darker" id="proceso">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <h2 class="subtitle">¿Cómo trabajamos?</h2>
+                <h3>Del diagnóstico a la solución, sin demoras</h3>
+            </div>
+
+            <div class="process-steps" data-reveal>
+                <div class="process-step">
+                    <div class="step-num">1</div>
+                    <h4>Contacto inicial</h4>
+                    <p>Nos describe la situación por teléfono, WhatsApp o email. Evaluamos el alcance.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">2</div>
+                    <h4>Diagnóstico en planta</h4>
+                    <p>Nos presentamos, inspeccionamos el equipo y definimos la mejor solución técnica.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">3</div>
+                    <h4>Propuesta clara</h4>
+                    <p>Cotizamos el trabajo con materiales, alcance y plazo. Sin sorpresas al final.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">4</div>
+                    <h4>Ejecución</h4>
+                    <p>Personal calificado, ART y EPP. Trabajamos con las normas de seguridad de su planta.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">5</div>
+                    <h4>Cierre y seguimiento</h4>
+                    <p>Entrega con informe técnico y seguimiento post-intervención si es necesario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section-dark" id="galeria">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <h2 class="subtitle">Trabajos realizados</h2>
+                <h3>Intervenciones en planta</h3>
+            </div>
+
+            <div class="gallery-mant" data-reveal>
+                <div class="img-card wide">
+                    <img src="Fotos/case-montajes.webp"
+                        alt="Montaje y mantenimiento de gran porte en planta industrial">
+                    <div class="img-caption">Montajes y mantenimiento de gran porte en planta</div>
+                </div>
+                <div class="img-card">
+                    <img src="Fotos/Reacondicionamiento de ventiladores sopladores.webp"
+                        alt="Reacondicionamiento de ventiladores y sopladores industriales">
+                    <div class="img-caption">Reacondicionamiento de ventiladores sopladores</div>
+                </div>
+                <div class="img-card">
+                    <img src="Fotos/case-vapor.webp"
+                        alt="Mantenimiento de cañerías de vapor de alta presión">
+                    <div class="img-caption">Mantenimiento de cañerías de vapor de alta presión</div>
+                </div>
+                <div class="img-card">
+                    <img src="Fotos/Instalación de equipos de alto vacío.webp"
+                        alt="Instalación y mantenimiento de equipos de alto vacío">
+                    <div class="img-caption">Instalación de equipos de alto vacío</div>
+                </div>
+                <div class="img-card">
+                    <img src="Fotos/Movimientos y montajes de gran porte, contamos con la maquinaria que se adapta a la necesidad del cliente.webp"
+                        alt="Movimientos y montajes de equipos pesados en planta">
+                    <div class="img-caption">Movimientos de equipos de gran porte</div>
+                </div>
+                <div class="img-card wide">
+                    <img src="Fotos/Instalacióin de transporte a tornillo para harina.webp"
+                        alt="Instalación de sistema de transporte a tornillo para harina">
+                    <div class="img-caption">Instalación de transporte a tornillo — Industria Alimenticia</div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 40px;" data-reveal>
+                <a href="#contacto" class="btn btn-outline">¿Necesita asistencia técnica en planta? Hablemos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-darker" id="preguntas">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <h2 class="subtitle">Preguntas frecuentes</h2>
+                <h3>Lo que los responsables de planta nos preguntan</h3>
+            </div>
+
+            <div class="faq-list" data-reveal>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Hacen contratos de mantenimiento anual o solo trabajos puntuales?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Trabajamos de las dos formas. Podemos armar un plan de mantenimiento preventivo
+                            anual con visitas periódicas, o bien intervenir puntualmente ante una urgencia o
+                            necesidad específica. Muchos clientes empiezan con un trabajo puntual y luego pasan
+                            a un contrato cuando comprueban nuestra forma de trabajar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Trabajan dentro de la planta con los equipos en operación?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, tenemos experiencia trabajando en plantas en operación con todos los protocolos
+                            de seguridad requeridos: permiso de trabajo, análisis de riesgo, bloqueo de
+                            energías (LOTO), ART y EPP adecuados. Coordinamos con su responsable de seguridad
+                            antes de cada intervención.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué tan rápido pueden presentarse ante una urgencia?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Depende de la ubicación y disponibilidad de cuadrillas al momento de la consulta.
+                            Para plantas del GBA y CABA el tiempo de respuesta habitual es de pocas horas.
+                            Lo mejor es llamarnos directamente al +54 11 3629 2997 para evaluar el caso
+                            en tiempo real.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuentan con habilitaciones para trabajar en plantas de alimentos o farmacéutica?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Nuestro personal cuenta con ART, libreta sanitaria (para plantas de alimentos)
+                            y capacitaciones de seguridad actualizadas. Podemos presentar toda la documentación
+                            que requiera su área de RRHH o HSE antes del ingreso a planta.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Pueden encargarse también de la fabricación si hay que reemplazar un equipo?
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Esa es una de las ventajas de trabajar con Teyser: si durante
+                            el mantenimiento detectamos que un equipo necesita ser reemplazado, lo fabricamos
+                            en nuestro taller y lo instalamos nosotros mismos. Un solo proveedor para todo
+                            el proceso, sin coordinaciones complicadas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTROS SERVICIOS -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <h2 class="subtitle">También hacemos</h2>
+                <h3>Capacidad integral para su planta</h3>
+            </div>
+
+            <div class="services-grid" style="margin-top: 40px;">
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Piping Sanitario TIG</h3>
+                        <p>Tendido e instalación de cañerías de proceso en acero inoxidable con soldadura TIG purgada.</p>
+                        <a href="/piping-sanitario" class="btn btn-outline" style="margin-top: 16px; display: inline-block; padding: 8px 20px; font-size: 0.85rem;">Ver servicio →</a>
+                    </div>
+                </div>
+
+                <div class="service-card" data-reveal>
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <ellipse cx="12" cy="5" rx="8" ry="3"/>
+                            <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/>
+                            <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3>Fabricación de Equipos</h3>
+                        <p>Tanques, reactores, tolvas y estructuras a medida en acero inoxidable en taller propio.</p>
+                        <a href="/fabricacion-equipos" class="btn btn-outline" style="margin-top: 16px; display: inline-block; padding: 8px 20px; font-size: 0.85rem;">Ver servicio →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact-cta section-accent" id="contacto">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-reveal>
+                    <h2>Hablemos del mantenimiento de su planta</h2>
+                    <p>Cuéntenos qué necesita: si es una urgencia, llámenos directamente. Si quiere
+                        armar un plan preventivo o cotizar asistencia para una parada, complete
+                        el formulario y le respondemos a la brevedad.</p>
+
+                    <div class="contact-methods">
+                        <a href="tel:+541136292997" class="contact-method">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            <span>+54 11 3629 2997 (urgencias)</span>
+                        </a>
+                        <a href="mailto:info@teyser.com.ar" class="contact-method">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>info@teyser.com.ar</span>
+                        </a>
+                        <div class="contact-method">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>Taller Propio en Moreno, Buenos Aires</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-reveal>
+                    <form class="b2b-form" action="https://formspree.io/f/mjgggdkg" method="POST">
+                        <input type="hidden" name="servicio_landing" value="Mantenimiento Industrial">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre y Apellido</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Ej: Ing. Carlos Gómez">
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" id="empresa" name="empresa" required placeholder="Ej: Laboratorios X">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Corporativo</label>
+                                <input type="email" id="email" name="email" required placeholder="carlos@empresa.com.ar">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono / WhatsApp</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="+54 9 11...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">¿Qué necesita?</label>
+                            <select id="asunto" name="asunto" required>
+                                <option value="" disabled selected>Seleccione una opción</option>
+                                <option value="Urgencia correctivo">Urgencia — necesito asistencia ahora</option>
+                                <option value="Correctivo programado">Mantenimiento correctivo programado</option>
+                                <option value="Plan preventivo">Plan de mantenimiento preventivo</option>
+                                <option value="Parada de planta">Asistencia en parada de planta</option>
+                                <option value="Consulta tecnica">Consulta técnica / presupuesto</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Descripción de la situación</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required
+                                placeholder="Qué equipo o sistema necesita mantenimiento, síntoma o falla, ubicación de la planta, urgencia..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">ENVIAR CONSULTA</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="LogoTeyser.webp" alt="Teyser Logo" class="footer-logo">
+                    <p>Soluciones integrales de ingeniería, montaje industrial y mantenimiento para la industria
+                        alimenticia y química en Argentina.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="/piping-sanitario">Piping Sanitario TIG</a></li>
+                        <li><a href="/fabricacion-equipos">Fabricación de Equipos</a></li>
+                        <li><a href="/mantenimiento-industrial">Mantenimiento Industrial</a></li>
+                        <li>Montajes de Gran Porte</li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/#casos">Casos de Éxito</a></li>
+                        <li><a href="/#diferencial">Por Qué Teyser</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Conectemos</h4>
+                    <div class="social-links" style="margin-top: 10px;">
+                        <a href="https://www.linkedin.com/company/teyser-equipos-industriales" target="_blank"
+                            aria-label="LinkedIn Teyser"
+                            style="color: var(--text-light); display: inline-flex; align-items: center; gap: 8px; text-decoration: none; transition: color 0.3s ease;"
+                            onmouseover="this.style.color='#0a66c2'" onmouseout="this.style.color='var(--text-light)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Teyser Equipos Industriales. Todos los derechos reservados.</p>
+                <div class="footer-legal">Industria Argentina</div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5491136292997" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <script src="main.js" defer></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+    </script>
+</body>
+
+</html>
