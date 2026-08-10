@@ -59,7 +59,8 @@
       "Bash(python build_xlsx2.py)",
       "Bash(python build_minuta.py)",
       "Bash(python3 -c ' *)",
-      "PowerShell(python \"C:\\\\Users\\\\ar030136\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-ar030136-Desktop-Web-Tayser\\\\34645406-6fcc-4cbf-8c90-2e453c7aa9e8\\\\scratchpad\\\\gen_docx.py\")"
+      "PowerShell(python \"C:\\\\Users\\\\ar030136\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-ar030136-Desktop-Web-Tayser\\\\34645406-6fcc-4cbf-8c90-2e453c7aa9e8\\\\scratchpad\\\\gen_docx.py\")",
+      "WebSearch"
     ]
   }
 }
