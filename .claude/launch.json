@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "farid-web",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "3030", "--directory", "C:\\Users\\ar030136\\Desktop\\FARID WEB2"],
+      "port": 3030
+    },
+    {
+      "name": "simulaciones-fisica",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8731", "--directory", "C:\\Users\\ar030136\\Desktop\\Muni\\Fisica\\Aportes Catedra\\Simulaciones"],
+      "port": 8731
+    }
+  ]
+}

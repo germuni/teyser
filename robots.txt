@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://teyser.com.ar/sitemap.xml
