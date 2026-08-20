@@ -60,7 +60,11 @@
       "Bash(python build_minuta.py)",
       "Bash(python3 -c ' *)",
       "PowerShell(python \"C:\\\\Users\\\\ar030136\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-ar030136-Desktop-Web-Tayser\\\\34645406-6fcc-4cbf-8c90-2e453c7aa9e8\\\\scratchpad\\\\gen_docx.py\")",
-      "WebSearch"
+      "WebSearch",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "Bash(curl -sI -o /dev/null -w \"%{http_code} -> %{redirect_url}\\\\n\" https://teyser.com.ar/blog)",
+      "Bash(curl -sI -o /dev/null -w \"%{http_code} -> %{redirect_url}\\\\n\" https://teyser.com.ar/blog/)"
     ]
   }
 }
