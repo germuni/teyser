@@ -52,7 +52,7 @@ Cordialmente,
 Teyser Equipos Industriales
 📞 +54 11 3629 2997
 📧 teyserequipos@gmail.com
-🌐 https://germuni.github.io/teyser/
+🌐 https://teyser.com.ar/
 
 ---
 
@@ -103,7 +103,7 @@ Teyser Equipos Industriales
 > ⚙️ Mantenimiento mecánico industrial
 >
 > Dejanos tu consulta y te respondemos a la brevedad.
-> También podés ver nuestros trabajos en: https://germuni.github.io/teyser/
+> También podés ver nuestros trabajos en: https://teyser.com.ar/
 
 ### Mensaje de ausencia (fuera de horario):
 > Gracias por escribirnos. Nuestro horario de atención es de Lunes a Viernes de 8:00 a 18:00hs. Te responderemos a primera hora. ¡Gracias por tu paciencia!
@@ -168,7 +168,7 @@ Teyser Equipos Industriales
 > 🏭 Fabricación de equipos
 > ⚙️ Mantenimiento industrial
 >
-> 🌐 https://germuni.github.io/teyser/
+> 🌐 https://teyser.com.ar/
 >
 > #SomosIndustria #EquipoTeyser
 
@@ -232,6 +232,6 @@ Teyser Equipos Industriales
 >
 > 📞 +54 11 3629 2997
 > 📧 teyserequipos@gmail.com
-> 🌐 https://germuni.github.io/teyser/
+> 🌐 https://teyser.com.ar/
 >
 > #Teyser #IndustriaArgentina #MontajesIndustriales
