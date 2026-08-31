@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada | Teyser</title>
+    <meta name="description" content="La página que busca no existe o cambió de dirección. Vea nuestros servicios de montajes industriales, piping sanitario y fabricación de equipos.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/webp" href="/LogoTeyser.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <style>
+        .nf-wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 24px;
+        }
+        .nf-inner {
+            max-width: 760px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .nf-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent-orange);
+            margin-bottom: 18px;
+        }
+        .nf-inner h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.9rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.12;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .nf-inner > p {
+            font-size: 1.02rem;
+            line-height: 1.75;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            max-width: 560px;
+        }
+        .nf-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+        .nf-link {
+            display: block;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            text-decoration: none;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+        .nf-link:hover {
+            transform: translateY(-3px);
+            border-color: rgba(37, 99, 235, 0.45);
+        }
+        .nf-link strong {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        .nf-link span {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .nf-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nf-wrap">
+        <div class="nf-inner">
+            <div class="nf-code">Error 404 · Página no encontrada</div>
+
+            <h1>Esta página no existe<br>o cambió de dirección</h1>
+
+            <p>Puede que el enlace esté desactualizado o que haya un error en la dirección.
+                Le dejamos los accesos directos a lo que suele buscarse:</p>
+
+            <div class="nf-links">
+                <a href="/capacidades" class="nf-link">
+                    <strong>Qué fabricamos &rarr;</strong>
+                    <span>Catálogo de equipos y montajes ejecutados</span>
+                </a>
+                <a href="/piping-sanitario" class="nf-link">
+                    <strong>Piping sanitario &rarr;</strong>
+                    <span>Cañerías de proceso en acero inoxidable</span>
+                </a>
+                <a href="/fabricacion-equipos" class="nf-link">
+                    <strong>Fabricación de equipos &rarr;</strong>
+                    <span>Tanques, reactores y equipos a medida</span>
+                </a>
+                <a href="/mantenimiento-industrial" class="nf-link">
+                    <strong>Mantenimiento industrial &rarr;</strong>
+                    <span>Preventivo, correctivo y paradas de planta</span>
+                </a>
+            </div>
+
+            <div class="nf-actions">
+                <a href="/" class="btn btn-primary">Volver al inicio</a>
+                <a href="https://wa.me/5491136292997" class="btn btn-outline" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
