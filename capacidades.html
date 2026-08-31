@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://teyser.com.ar/capacidades">
     <meta property="og:title" content="Qué Fabricamos | Catálogo de Equipos y Montajes — Teyser">
-    <meta property="og:description" content="18 tipos de trabajo ejecutados en planta: reactores, scrubbers, tanques, silos, secaderos, piping de vapor y más. +25 años en industria alimenticia y química.">
+    <meta property="og:description" content="Algunos de los trabajos que ejecutamos: reactores, scrubbers, tanques, silos, secaderos, piping de vapor y más. +25 años en industria alimenticia y química.">
     <meta property="og:image" content="https://teyser.com.ar/Fotos/case-reactores.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -28,7 +28,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Qué Fabricamos | Catálogo de Equipos y Montajes — Teyser">
-    <meta name="twitter:description" content="18 tipos de trabajo ejecutados en planta para industria alimenticia y química.">
+    <meta name="twitter:description" content="Algunos de los trabajos que ejecutamos para industria alimenticia y química.">
     <meta name="twitter:image" content="https://teyser.com.ar/Fotos/case-reactores.webp">
 
     <!-- Google Fonts -->
@@ -305,7 +305,7 @@
         <div class="container">
             <div class="section-header text-center" data-reveal>
                 <h2 class="subtitle">Catálogo de trabajos</h2>
-                <h3>18 tipos de equipo y montaje ejecutados</h3>
+                <h3>Algunos de nuestros trabajos</h3>
             </div>
 
             <div class="cap-filters" data-reveal>
@@ -317,7 +317,7 @@
                 <button class="cap-filter" data-cat="mont">Montaje &amp; Mantenimiento</button>
             </div>
 
-            <div class="cap-count" id="capCount">Mostrando 18 de 18 trabajos</div>
+            <div class="cap-count" id="capCount">Mostrando todos los trabajos</div>
 
             <div class="cap-grid" id="capGrid">
 
@@ -594,7 +594,9 @@
                         card.classList.toggle('hidden', !match);
                         if (match) shown++;
                     });
-                    counter.textContent = 'Mostrando ' + shown + ' de ' + cards.length + ' trabajos';
+                    counter.textContent = (cat === 'all')
+                        ? 'Mostrando todos los trabajos'
+                        : 'Mostrando ' + shown + (shown === 1 ? ' trabajo' : ' trabajos');
                 });
             });
         })();
