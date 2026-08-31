@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qué Fabricamos | Equipos y Montajes Industriales — Teyser</title>
     <meta name="description"
-        content="Reactores, scrubbers, tanques, silos, secaderos y pisos estancos. Trabajos en acero inoxidable para industria alimenticia y química en Buenos Aires.">
+        content="Fermentadores, tanques de guarda, reactores, scrubbers y tolvas en acero inoxidable. Para cervecería, vino, aceite, lácteos y química en Buenos Aires.">
     <meta name="keywords"
-        content="fabricación equipos acero inoxidable, reactores químicos Argentina, scrubber lavado de gases, tanques PRFV, silos de lona, pisos estancos acero inoxidable, secadero spray, cañerías de vapor, caudalímetros industriales, montajes de gran porte Buenos Aires">
+        content="fabricación fermentadores cerveceria Argentina, tanque fermentación acero inoxidable, tanques para vino Buenos Aires, tolvas aceituna, fabricación equipos acero inoxidable, reactores químicos, scrubber lavado de gases, tanques PRFV, secadero spray, tanque de guarda cerveza">
     <meta name="author" content="Teyser Montajes Industriales">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://teyser.com.ar/capacidades">
@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://teyser.com.ar/capacidades">
     <meta property="og:title" content="Qué Fabricamos | Catálogo de Equipos y Montajes — Teyser">
-    <meta property="og:description" content="Algunos de los trabajos que ejecutamos: reactores, scrubbers, tanques, silos, secaderos, piping de vapor y más. +25 años en industria alimenticia y química.">
+    <meta property="og:description" content="Fermentadores, tanques de guarda, reactores, scrubbers y tolvas en acero inoxidable. Para cervecería, vino, aceite, lácteos y química. +25 años.">
     <meta property="og:image" content="https://teyser.com.ar/Fotos/case-reactores.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -28,7 +28,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Qué Fabricamos | Catálogo de Equipos y Montajes — Teyser">
-    <meta name="twitter:description" content="Algunos de los trabajos que ejecutamos para industria alimenticia y química.">
+    <meta name="twitter:description" content="Equipos de proceso en acero inoxidable para cervecería, vino, aceite, lácteos y química.">
     <meta name="twitter:image" content="https://teyser.com.ar/Fotos/case-reactores.webp">
 
     <!-- Google Fonts -->
@@ -233,6 +233,139 @@
             .cap-filter { font-size: 0.66rem; padding: 8px 13px; }
             .cap-note { padding: 22px 20px; }
         }
+
+        /* ── Equipos que fabricamos ──────────────────────── */
+        .sec-intro {
+            max-width: 640px;
+            margin: 18px auto 0;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        .ind-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 20px;
+            margin-top: 44px;
+        }
+        .ind-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 26px 26px 28px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        .ind-card:hover {
+            border-color: rgba(37, 99, 235, 0.4);
+            transform: translateY(-3px);
+        }
+        .ind-tag {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            padding-bottom: 14px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+        .ind-tag::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 46px;
+            height: 2px;
+        }
+        .ind-cerv::after { background: #f59e0b; }
+        .ind-vino::after { background: #a855f7; }
+        .ind-oliv::after { background: #10b981; }
+        .ind-alim::after { background: #38bdf8; }
+        .ind-quim::after { background: var(--accent-blue); }
+        .ind-serv::after { background: var(--accent-orange); }
+
+        .eq-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+        .eq-list li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 0.87rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        .eq-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.62em;
+            width: 7px;
+            height: 1px;
+            background: var(--accent-orange);
+        }
+        .eq-list b {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Tabla de parámetros */
+        .specs-block {
+            margin-top: 44px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+        .specs-head {
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid var(--border);
+            padding: 13px 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+        .specs-scroll { overflow-x: auto; }
+        .specs-tbl {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 480px;
+        }
+        .specs-tbl th {
+            text-align: left;
+            vertical-align: top;
+            width: 210px;
+            padding: 15px 24px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.06em;
+            font-weight: 400;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.09);
+            white-space: nowrap;
+        }
+        .specs-tbl td {
+            padding: 15px 24px 15px 0;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            border-bottom: 1px solid rgba(148, 163, 184, 0.09);
+        }
+        .specs-tbl tr:last-child th,
+        .specs-tbl tr:last-child td { border-bottom: none; }
+
+        @media (max-width: 640px) {
+            .ind-grid { grid-template-columns: 1fr; }
+            .ind-card { padding: 22px 20px 24px; }
+            .specs-tbl th { width: auto; }
+        }
+
     </style>
 </head>
 
@@ -285,9 +418,9 @@
                     Trabajos ejecutados · Industria Alimenticia &amp; Química
                 </div>
                 <h1>Qué fabricamos y montamos</h1>
-                <p>Un recorrido por los trabajos que ya ejecutamos en planta: equipos de proceso, sistemas de
-                    tratamiento, piping y montajes pesados. Si su necesidad se parece a alguno de estos, podemos
-                    resolverla.</p>
+                <p>Equipos de proceso en acero inoxidable para cervecería, vino, aceite, lácteos y química.
+                    Fabricamos sobre plano propio o del cliente — y más abajo puede ver trabajos ya ejecutados
+                    en planta.</p>
                 <div class="hero-actions">
                     <a href="#contacto" class="btn btn-primary btn-large">SOLICITAR COTIZACIÓN
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -301,11 +434,150 @@
         </div>
     </section>
 
+    <!-- EQUIPOS QUE FABRICAMOS -->
+    <section class="section-darker" id="equipos">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <h2 class="subtitle">Equipos que fabricamos</h2>
+                <h3>Qué podemos construir para su proceso</h3>
+                <p class="sec-intro">Trabajamos sobre plano propio o del cliente. Si su equipo no figura en esta
+                    lista pero es acero inoxidable y proceso, consúltenos igual: la mayoría de nuestros trabajos
+                    son a medida.</p>
+            </div>
+
+            <div class="ind-grid">
+
+                <article class="ind-card" data-reveal>
+                    <div class="ind-tag ind-cerv">Cervecería y bebidas fermentadas</div>
+                    <ul class="eq-list">
+                        <li><b>Fermentadores cilindro-cónicos</b> con camisa de frío, aislación y cono a 60°</li>
+                        <li><b>Tanques de maduración y guarda</b> a presión, con válvula de seguridad</li>
+                        <li><b>Tanques de agua caliente y fría</b> para sala de cocción</li>
+                        <li><b>Piping de proceso</b> e interconexión sanitaria entre equipos</li>
+                        <li><b>Plataformas y escaleras</b> de acceso y operación</li>
+                    </ul>
+                </article>
+
+                <article class="ind-card" data-reveal>
+                    <div class="ind-tag ind-vino">Vitivinícola</div>
+                    <ul class="eq-list">
+                        <li><b>Tanques de fermentación</b> con camisa de refrigeración</li>
+                        <li><b>Tanques de guarda</b> y almacenamiento de vino</li>
+                        <li><b>Piping de trasiego</b> y líneas de bombeo</li>
+                        <li><b>Pasarelas y plataformas</b> sobre batería de tanques</li>
+                        <li><b>Reparación y recuperación</b> de tanques existentes</li>
+                    </ul>
+                </article>
+
+                <article class="ind-card" data-reveal>
+                    <div class="ind-tag ind-oliv">Olivícola y aceitera</div>
+                    <ul class="eq-list">
+                        <li><b>Tolvas de recepción</b> de aceituna con estructura de soporte</li>
+                        <li><b>Tanques de almacenamiento</b> de aceite en inoxidable</li>
+                        <li><b>Transportes a tornillo</b> y cintas para producto sólido</li>
+                        <li><b>Piping y líneas de bombeo</b> de aceite</li>
+                        <li><b>Serpentinas de calefacción</b> para mantener temperatura</li>
+                    </ul>
+                </article>
+
+                <article class="ind-card" data-reveal>
+                    <div class="ind-tag ind-alim">Láctea y alimenticia</div>
+                    <ul class="eq-list">
+                        <li><b>Tanques de proceso</b> con agitador, camisa y aislación</li>
+                        <li><b>Fundidores</b> y equipos con intercambio térmico</li>
+                        <li><b>Secaderos por aspersión</b> (spray) con pulido interior</li>
+                        <li><b>Transporte de producto seco</b> a granel</li>
+                        <li><b>Pisos estancos</b> y equipamiento de línea a medida</li>
+                    </ul>
+                </article>
+
+                <article class="ind-card" data-reveal>
+                    <div class="ind-tag ind-quim">Química y tratamiento</div>
+                    <ul class="eq-list">
+                        <li><b>Reactores llave en mano</b> con plataforma y piping asociado</li>
+                        <li><b>Torres de lavado de gases</b> (scrubbers) ácidos y alcalinos</li>
+                        <li><b>Tanques de PRFV</b> para fluidos corrosivos</li>
+                        <li><b>Equipos y líneas de alto vacío</b></li>
+                        <li><b>Ductos de aspiración</b> para filtros de mangas</li>
+                    </ul>
+                </article>
+
+                <article class="ind-card" data-reveal>
+                    <div class="ind-tag ind-serv">Servicios auxiliares</div>
+                    <ul class="eq-list">
+                        <li><b>Cañerías de vapor</b> de alta y baja presión</li>
+                        <li><b>Instalación de instrumentación</b> y caudalímetros</li>
+                        <li><b>Movimientos y montajes</b> de gran porte en planta</li>
+                        <li><b>Recuperación de equipos</b>: ventiladores, sopladores, intercambiadores</li>
+                        <li><b>Estructuras metálicas</b>, escaleras y barandas</li>
+                    </ul>
+                </article>
+
+            </div>
+
+            <!-- PARÁMETROS TÉCNICOS -->
+            <div class="specs-block" data-reveal>
+                <div class="specs-head">Cómo fabricamos</div>
+                <div class="specs-scroll">
+                    <table class="specs-tbl">
+                        <tbody>
+                            <tr>
+                                <th>Materiales</th>
+                                <td>AISI 304 · AISI 316L · acero al carbono · acero galvanizado · PRFV</td>
+                            </tr>
+                            <tr>
+                                <th>Soldadura</th>
+                                <td>TIG purgada con argón. Doble faz en recipientes, amolada y pareja</td>
+                            </tr>
+                            <tr>
+                                <th>Terminación interior</th>
+                                <td>2B, pulido sanitario, decapado y pasivado según requerimiento del proceso</td>
+                            </tr>
+                            <tr>
+                                <th>Ensayos</th>
+                                <td>Prueba hidráulica y de estanqueidad, con registro documentado</td>
+                            </tr>
+                            <tr>
+                                <th>Documentación</th>
+                                <td>Mill certificates del material, planos de fabricación y as-built</td>
+                            </tr>
+                            <tr>
+                                <th>Alcance</th>
+                                <td>Fabricación en taller, o llave en mano con montaje, conexionado y puesta en marcha</td>
+                            </tr>
+                            <tr>
+                                <th>Capacidades y medidas</th>
+                                <td>Se definen por proyecto según proceso, presión de trabajo y layout disponible</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="cap-note" data-reveal>
+                <h4>Trabajamos con plano propio o del cliente</h4>
+                <p>Si tiene planos, los interpretamos y cotizamos. Si no, diseñamos el equipo partiendo de sus
+                    requerimientos de proceso: capacidad, presión, temperatura, fluido y normativa aplicable.
+                    Determinados procesos puntuales se ejecutan con proveedores especializados de confianza,
+                    manteniendo Teyser la responsabilidad sobre el conjunto y la entrega.</p>
+            </div>
+
+            <div class="text-center" style="margin-top: 36px;" data-reveal>
+                <a href="#contacto" class="btn btn-primary btn-large">Pedir cotización
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+
     <!-- CATÁLOGO -->
     <section class="section-dark">
         <div class="container">
             <div class="section-header text-center" data-reveal>
-                <h2 class="subtitle">Catálogo de trabajos</h2>
+                <h2 class="subtitle">Trabajos ejecutados</h2>
                 <h3>Algunos de nuestros trabajos</h3>
             </div>
 
